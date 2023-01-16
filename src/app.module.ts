@@ -10,7 +10,9 @@ import { UsersModule } from "./users/users.module";
     ConfigModule.forRoot({
       envFilePath: `.${process.env.NODE_ENV}.env`,
     }),
-    MongooseModule.forRoot(process.env.URL_DB),
+    MongooseModule.forRoot(
+      "mongodb+srv://admin:9nwtYzrU5H4ZTHNS@recipe-app.spwgx.mongodb.net/?retryWrites=true&w=majority"
+    ),
     AuthModule,
     UsersModule,
   ],
